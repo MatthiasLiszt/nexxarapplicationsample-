@@ -1,0 +1,97 @@
+<!-- mobile version of static page -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+
+#themenu{
+  position: relative;
+  background: white;
+  z-index: 9999;
+}
+#HOME{
+ text-align:right;
+ padding: 0;
+ margin: 0;
+ list-style: none; 
+}
+
+#HOME ul{
+ text-align:right;
+ padding: 0;
+ margin: 0;
+ list-style: none; 
+}
+
+#HOME ul{
+         position: absolute;
+         left: -999em;
+        }
+        
+#wholemobilemenu{
+ width: 320px;
+}
+
+ 
+#HOME a {text-decoration: none;
+         color: black;
+        } 
+       
+     
+
+#scrollablecontent{
+ height: 61vh; 
+}
+
+#burgerbar {background-image: url('./Links/menu.png');
+            width: 23px;
+            height: 19px;
+            
+           }
+           
+ #burgerbar:hover {background-image: url('./Links/menu-hover.png');
+                  }          
+                  
+                    
+.logob {display: inline-block;}
+   
+</style>
+</head>
+<body>
+<div id="wholemobilemenu">
+<div id="logoburgerbar">
+<p class="logob"><img src="./Links/logo.png" width="270px"/></p>
+<p class="logob" id="burgerbar" onmouseover="showMenu()" >
+<ul id="HOME">
+	   <ul id="themenu">
+	   <li>HOME</li> 
+	   <li><a href="#">ÜBER DIESEN BERICHT</a></li>
+	   <li><a href="#">KONZERNLAGEBERICHT</a></li>
+	   <li><a href="#">KONZERNABSCHLUSS</a></li>
+	   <li><a href="#">KONZERNANHANG</a></li>
+	   </ul>
+</ul>
+</p>
+</div>
+</div>
+<div >
+ <iframe id="scrollablecontent" src="mobilecontent.html"></iframe>
+</div>
+<br></br>
+<hr></hr>
+&#169; nexxar GmbH
+<script>
+ function showMenu(){
+  var x=document.getElementById("themenu");
+  x.style="left:auto";
+  console.log("bar clicked");
+ }
+ function restoreMenu(){
+  var x=document.getElementById("themenu");
+  x.style="left:-999em";
+  console.log("mouse left");
+ }
+ setInterval(function(){restoreMenu();},4001)
+</script>
+</body>
+</html>

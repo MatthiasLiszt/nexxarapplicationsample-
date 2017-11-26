@@ -1,0 +1,96 @@
+<!-- mobile version of static page -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+
+#HOME{
+ text-align:right;
+ padding: 0;
+ margin: 0;
+ list-style: none; 
+ position: absolute;
+ left: -999em;
+ width: 84%;
+ background-color: #e0e0e0;
+ z-index: 9999;
+}
+        
+#wholemobilemenu{
+ width: 91vw;
+}
+
+ 
+#HOME a {text-decoration: none;
+         color: black;
+        } 
+       
+     
+
+#scrollablecontent{
+ height: 61vh; 
+ width: 91vw;
+ padding: 11px;
+ border: none;
+}
+
+#burgerbar {background-image: url('./Links/menu.png');
+            width: 23px;
+            height: 19px;
+            
+           }
+           
+                   
+ #burgerbar:hover ~ #HOME {left: auto;
+                    }                 
+
+ #burgerbar:hover {background-image: url('./Links/menu-hover.png');
+                  } 
+                    
+ #logoburgerbar   {width: 91vw;
+                  }                  
+.logob {display: inline-block;}
+   
+</style>
+</head>
+<body >
+
+<div id="wholemobilemenu">
+<div id="logoburgerbar">
+<p class="logob"><img src="./Links/logo.png" width="84%"/></p>
+<p class="logob" id="burgerbar" onclick="showResponsMenu()">
+           <div id="responsmenu" >
+           <ul id="HOME">
+	   <li>HOME</li> 
+	   <li><a href="#">&Uuml;BER&nbsp;DIESEN&nbsp;BERICHT</a></li>
+	   <li><a href="#">KONZERNLAGEBERICHT</a></li>
+	   <li><a href="#">KONZERNABSCHLUSS</a></li>
+	   <li><a href="#">KONZERNANHANG</a></li>
+	  
+	   </ul>
+	  </div> 
+</p>
+</div>
+</div>
+<div onmouseover="removeResponsMenu()">
+ <iframe id="scrollablecontent" src="mobilecontent.html"></iframe>
+</div>
+<br></br>
+<hr></hr>
+&#169; nexxar GmbH
+<script>
+function showResponsMenu(){
+ var x=document.getElementById('HOME');
+ console.log("showResponsMenu");
+ x.style.left="auto";
+}
+
+function removeResponsMenu(){
+ var x=document.getElementById('HOME');
+ console.log("showResponsMenu");
+ x.style.left="-999em";
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!-- desktop version -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+
+body {padding: 11px;}
+
+.inlineblock {display: inline-block;}
+
+#menu {overflow: auto;             
+      }
+      
+#menu, #menu ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1em;
+    font-size: 21px;
+}      
+      
+#menu li {
+    float: right;
+    
+}      
+
+        
+#menu ul {
+    position: absolute;
+    left: -999em;
+    width: 160px;
+    z-index: 9999;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    text-align: left;
+}       
+      
+#menu a {text-decoration: none;
+         color: black;
+        }       
+
+#menu li:hover > ul {
+    left: auto;
+}
+
+            
+#scrollablecontent{
+ width: 60vw; 
+ height: 61%;
+ padding: 11px;
+ margin: 11px;
+ border: none;
+ display: inline-block;
+}        
+
+#scrollablelorem{
+ width: 21vw;
+ height: 61%;
+ padding: 11px;
+ margin: 11px;
+ border: none;
+ display: inline-block;
+}
+</style>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="wholemenu">
+<p class="inlineblock"><img src="./Links/logo.png" width="45%" /></p>
+<p class="inlineblock">
+           <ul id="menu">
+           <li><a href="#">KONZERNANHANG&nbsp;&nbsp;&nbsp;</a></li>
+           <li><a href="#">KONZERNABSCHLUSS&nbsp;&nbsp;&nbsp;</a></li>
+           <li><a href="#">KONZERNLAGEBERICHT&nbsp;&nbsp;&nbsp;</a>
+               <ul><li><a href="#">Gewinn-&nbsp;und&nbsp;Verlustrechnung</a></li>
+                   <li><a href="#">Gesamtergebnisrechnung</a></li>
+                   <li><a href="#">Bilanz</a></li>
+                   <li><a href="#">Kapitalflussrechnung</a></li>
+                   <li><a href="#">Eigenkapitalveränderungsrechnung</a></li>
+               </ul>
+           </li>    
+           <li><a href="#">ÜBER DIESEN BERICHT&nbsp;&nbsp;&nbsp;</a></li>
+           <li><a href="#">HOME&nbsp;</a></li>
+               	   
+	   </ul>
+</p>	   
+</div>
+<div id="mainbody">
+<p class="inlineblock"><iframe id="scrollablecontent" src="desktopmain.html">
+</iframe></p>
+<p class="inlineblock"><iframe id="scrollablelorem" src="desktoplorem.html">
+</iframe></p>
+</div>
+<hr></hr>
+&#169; nexxar GmbH
+</body>
+</html>
